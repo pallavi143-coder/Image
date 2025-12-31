@@ -1,2 +1,31 @@
-# Image
-Scan qr code to see image
+<!DOCTYPE html>
+<html>
+<head>
+    <title>QR Code for Image</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial;
+            background: #f5f5f5;
+        }
+        #qrcode {
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Scan to View Image</h2>
+<div id="qrcode"></div>
+
+<script>
+    new QRCode(document.getElementById("qrcode"), {
+        text: "https://example.com/image.jpg",
+        width: 250,
+        height: 250
+    });
+</script>
+
+</body>
+</html>
